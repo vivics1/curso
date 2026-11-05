@@ -1,0 +1,26 @@
+.topo {
+    flex-direction: row-reverse;
+    background: linear-gradient(90deg, #0f172a 0%, #111827 100%);
+    color: var(--cor-secundaria);
+    font-size: var(--fonte-t3);
+    padding-block: 30px;
+    margin-bottom: 24px;
+    box-shadow: 0 18px 40px rgba(15, 23, 42, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+
+    .usuario {
+        gap: 16px;
+
+        & span {
+            margin-right: 8px;
+            color: #fffdfd;
+        }
+
+        & img {
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            border: 2px solid rgba(255, 255, 255, 0.16);
+        }
+    }
+}
