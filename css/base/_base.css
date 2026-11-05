@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+:root {
+    --fonte-padrao: 'Inter', sans-serif;
+    --fonte-tamanho-padrao: 16px;
+    --fonte-t1: 25px;
+    --fonte-t2: 20px;
+    --fonte-t3: 13px;
+    --cor-primaria: #111827;
+    --cor-secundaria: #2e9e5d;
+    --cor-tercearia: #dfe8df;
+    --cor-quaternaria: #f3faf4;
+    --largura-padrao: 1200px;
+}
+
+*, ::before, ::after {
+    box-sizing: border-box;
+    outline: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+html, body {
+    min-height: 100vh;
+    width: 100vw;
+    overflow-x: hidden;
+}
+
+body {
+    font-family: var(--fonte-padrao);
+    font-size: var(--fonte-tamanho-padrao);
+    color: var(--cor-primaria);
+    font-weight: 400;
+    line-height: 1.5;
+    background:
+        radial-gradient(circle at top left, rgba(46, 158, 93, 0.12), transparent 30%),
+        linear-gradient(180deg, #f4fbf6 0%, #edf5ef 100%);
+    overflow-x: hidden;
+    padding-bottom: 24px;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+}
+
+a {
+    color: var(--cor-primaria);
+    text-decoration: none;
+    transition: color 0.2s ease;
+
+    &:hover {
+        color: var(--cor-secundaria);
+    }
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.container-padding {
+    padding-left: calc((100% - var(--largura-padrao)) / 2);
+    padding-right: calc((100% - var(--largura-padrao)) / 2);
+
+    @media (max-width: 1200px) {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
+main.flex {
+    align-items: stretch;
+    gap: 24px;
+}
+
+.coluna-central {
+    flex-grow: 1;
+    min-width: 0;
+}
